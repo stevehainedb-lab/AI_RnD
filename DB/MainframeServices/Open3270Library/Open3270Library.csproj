@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+
+        <!-- Assembly Information -->
+        <AssemblyName>Open3270</AssemblyName>
+        <RootNamespace>Open3270</RootNamespace>
+        <AssemblyTitle>Open3270 TN3270 Library</AssemblyTitle>
+        <Product>Open3270</Product>
+        <Description>A TN3270 library for .NET applications</Description>
+        <Copyright>Copyright © 2004-2017 Michael Warriner. All rights reserved. Released under the terms of the GNU Lesser General Public License as published by the Free Software Foundation.</Copyright>
+        <Version>1.6.0.0</Version>
+        <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <FileVersion>1.6.0.0</FileVersion>
+
+        <!-- Package Information (for NuGet if needed) -->
+        <PackageId>Open3270</PackageId>
+        <Authors>Michael Warriner</Authors>
+        <Company>Open3270</Company>
+        <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/open3270/open3270</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/open3270/open3270</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+
+        <!-- Build Configuration -->
+        <OutputType>Library</OutputType>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+        <Deterministic>true</Deterministic>
+
+        <!-- Code Analysis -->
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <AnalysisLevel>latest</AnalysisLevel>
+        <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <DebugType>full</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+        <Optimize>false</Optimize>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+        <DebugType>none</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+        <Optimize>true</Optimize>
+        <DefineConstants>TRACE</DefineConstants>
+    </PropertyGroup>
+
+    <!-- Strong Naming (if you want to keep it) -->
+    <!--
+    <PropertyGroup>
+      <SignAssembly>true</SignAssembly>
+      <AssemblyOriginatorKeyFile>Open3270.key</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+    -->
+
+    <!-- Exclude specific files if needed -->
+    <ItemGroup>
+        <Compile Remove="bin\**" />
+        <Compile Remove="obj\**" />
+        <EmbeddedResource Remove="bin\**" />
+        <EmbeddedResource Remove="obj\**" />
+        <None Remove="bin\**" />
+        <None Remove="obj\**" />
+        <Compile Remove="_customisation\ScreenProcessing\**" />
+        <EmbeddedResource Remove="_customisation\ScreenProcessing\**" />
+        <None Remove="_customisation\ScreenProcessing\**" />
+        <Compile Remove="Server\**" />
+        <EmbeddedResource Remove="Server\**" />
+        <None Remove="Server\**" />
+        <Compile Remove="LogParser\TN3270HostParser.cs" />
+        <Compile Remove="CommFramework\ServerSocket.cs" />
+        <Compile Remove="_customisation\async\ServerSocket.Async.cs" />
+    </ItemGroup>
+
+    <!-- Keep .editorconfig and key file -->
+    <ItemGroup>
+        <None Include=".editorconfig" />
+        <None Include="Open3270.key" />
+    </ItemGroup>
+
+</Project>
