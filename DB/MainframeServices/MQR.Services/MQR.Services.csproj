@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="8.5.5" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.10" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.10" />
+      <PackageReference Include="System.IO.Abstractions" Version="22.0.16" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MQR.DataAccess\MQR.DataAccess.csproj" />
+      <ProjectReference Include="..\Open3270Library\Open3270Library.csproj" />
+    </ItemGroup>
+
+</Project>
