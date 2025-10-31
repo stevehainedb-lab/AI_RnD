@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{240D54FD-C2A2-AACB-CAA5-CE0B0FF793FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainframeServices", "MainframeServices", "{9A6C93C0-FD3B-87AC-1E24-D4FC02CA8964}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQR.Services", "DB\MainframeServices\MQR.Services\MQR.Services.csproj", "{232728D0-91DA-B4A8-01DE-0CFFB376121F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{232728D0-91DA-B4A8-01DE-0CFFB376121F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232728D0-91DA-B4A8-01DE-0CFFB376121F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232728D0-91DA-B4A8-01DE-0CFFB376121F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232728D0-91DA-B4A8-01DE-0CFFB376121F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A6C93C0-FD3B-87AC-1E24-D4FC02CA8964} = {240D54FD-C2A2-AACB-CAA5-CE0B0FF793FF}
+		{232728D0-91DA-B4A8-01DE-0CFFB376121F} = {9A6C93C0-FD3B-87AC-1E24-D4FC02CA8964}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46A177E8-73DE-457F-BF00-1244406FEEAF}
+	EndGlobalSection
+EndGlobal

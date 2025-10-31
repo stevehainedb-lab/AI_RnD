@@ -67,6 +67,7 @@ public class LogonCredentialProvider(
     {
         credential.LockLastTakenUtc = null;
         await using var db = await dbContextFactory.CreateDbContextAsync(cancellationToken);
+        db.LogonCredentials.Update(credential);
         await db.SaveChangesAsync(cancellationToken);
     }
 
